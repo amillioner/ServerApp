@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\SportsStore\\ServerApp\\ServerApp.csproj": {}
+    "C:\\Users\\anwar\\source\\repos\\SportsStore\\ServerApp\\ServerApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\SportsStore\\ServerApp\\ServerApp.csproj": {
+    "C:\\Users\\anwar\\source\\repos\\SportsStore\\ServerApp\\ServerApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\SportsStore\\ServerApp\\ServerApp.csproj",
+        "projectUniqueName": "C:\\Users\\anwar\\source\\repos\\SportsStore\\ServerApp\\ServerApp.csproj",
         "projectName": "ServerApp",
-        "projectPath": "C:\\Users\\user\\source\\repos\\SportsStore\\ServerApp\\ServerApp.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\SportsStore\\ServerApp\\obj\\",
+        "projectPath": "C:\\Users\\anwar\\source\\repos\\SportsStore\\ServerApp\\ServerApp.csproj",
+        "packagesPath": "C:\\Users\\anwar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anwar\\source\\repos\\SportsStore\\ServerApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\anwar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
