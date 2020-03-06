@@ -12,15 +12,19 @@ namespace ServerApp.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly DataContext context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(DataContext ctx, ILogger<HomeController> logger)
         {
+            context = ctx;
             _logger = logger;
         }
 
         public IActionResult Index()
         {
-            return View("Placeholder");
+            //return View("Placeholder");
+            //return View();
+            return View(context.Products.First());
         }
 
         public IActionResult Privacy()
