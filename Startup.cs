@@ -31,6 +31,12 @@ namespace ServerApp
             var connectionString = Configuration["ConnectionStrings:DefaultConnection"];
             services.AddDbContext<DataContext>(options => options.UseSqlServer(connectionString));
 
+            services.AddControllersWithViews()
+                .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.IgnoreNullValues = true;
+                });
+
             services.AddControllersWithViews();
             services.AddRazorPages();
 
