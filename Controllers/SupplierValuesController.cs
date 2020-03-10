@@ -10,7 +10,34 @@ namespace ServerApp.Controllers
     [Authorize(Roles = "Administrator")]
     public class SupplierValuesController : Controller
     {
-        //private DataContext context;
-        //// ...methods omitted for brevity...
+        private DataContext context;
+
+        public SupplierValuesController(DataContext ctx)
+        {
+            context = ctx;
+        }
+
+        [HttpGet]
+        public IEnumerable<Supplier> GetSuppliers()
+        {
+            return context.Suppliers;
+        }
+
+        [HttpPost]
+        public IActionResult CreateSupplier([FromBody] SupplierData sData)
+        {
+            if (ModelState.IsValid)
+            {
+                var s = sData.Supplier;
+                context.Add(s);
+                context.SaveChanges();
+                return Ok(s.SupplierId);
+            }
+            else
+            {
+                return BadRequest(ModelState);
+            }
+        }
     }
+
 }
