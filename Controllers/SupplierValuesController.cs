@@ -33,10 +33,20 @@ namespace ServerApp.Controllers
                 context.SaveChanges();
                 return Ok(s.SupplierId);
             }
-            else
+            return BadRequest(ModelState);
+        }
+        [HttpPost]
+        public IActionResult ReplaceSupplier(long id, [FromBody] SupplierData sData)
+        {
+            if (ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                var s = sData.Supplier;
+                s.SupplierId = id;
+                context.Update(s);
+                context.SaveChanges();
+                return Ok();
             }
+            return BadRequest(ModelState);
         }
     }
 

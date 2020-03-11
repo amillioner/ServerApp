@@ -35,9 +35,8 @@ namespace ServerApp
                 .AddJsonOptions(options =>
                 {
                     options.JsonSerializerOptions.IgnoreNullValues = true;
-                });
+                }).AddNewtonsoftJson();
 
-            services.AddControllersWithViews();
             services.AddRazorPages();
 
             services.AddSwaggerGen(options =>
@@ -71,6 +70,13 @@ namespace ServerApp
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                endpoints.MapControllerRoute(
+                    "angular_fallback", 
+                    //"{target:regex(table|detail)}/{*catchall}",
+                    "{target:regex(store)}/{*catchall}",
+                    new { controller = "Home", action = "Index" });
+                endpoints.MapRazorPages();
             });
 
             app.UseSwagger();
