@@ -93,27 +93,27 @@ namespace ServerApp.Controllers
                     .Distinct().OrderBy(c => c)
             });
         }
-        [HttpGet]
-        public IEnumerable<Product> GetProducts(bool related = false)
-        {
-            IQueryable<Product> query = context.Products;
-            if (related)
-            {
-                query = query.Include(p => p.Supplier)
-                    .Include(p => p.Ratings);
+        // [HttpGet]
+        // public IEnumerable<Product> GetProducts(bool related = false)
+        // {
+        //     IQueryable<Product> query = context.Products;
+        //     if (related)
+        //     {
+        //         query = query.Include(p => p.Supplier)
+        //             .Include(p => p.Ratings);
 
-                var data = query.ToList();
-                data.ForEach(p =>
-                {
-                    if (p.Supplier != null)
-                        p.Supplier.Products = null;
+        //         var data = query.ToList();
+        //         data.ForEach(p =>
+        //         {
+        //             if (p.Supplier != null)
+        //                 p.Supplier.Products = null;
 
-                    p.Ratings?.ForEach(r => r.Product = null);
-                });
-                return data;
-            }
-            return query;
-        }
+        //             p.Ratings?.ForEach(r => r.Product = null);
+        //         });
+        //         return data;
+        //     }
+        //     return query;
+        // }
         [HttpPost]
         public IActionResult CreateProduct([FromBody] ProductData pdata)
         {
