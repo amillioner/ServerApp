@@ -145,3 +145,5 @@ obj/Debug/netcoreapp3.0/staticwebassets/ServerApp.StaticWebAssets.xml
 .vs/ServerApp/v16/TestStore/0/testlog.manifest
 /bin/Debug/netcoreapp3.0
 /wwwroot/lib/font-awesome
+/bin/Debug/netcoreapp3.1
+/obj/Debug
